@@ -24,8 +24,8 @@ print_banner() {
 }
 
 # === 📖 Load user from config if not provided ===
-if [ -z "$USER" ] && [ -f /etc/bobbis-user.conf ]; then
-  . /etc/bobbis-user.conf
+if [ -z "$USER" ] && [ -f /etc/bobbis.conf ]; then
+  . /etc/bobbis.conf
   USER="$DEFAULT_USER"
 fi
 
