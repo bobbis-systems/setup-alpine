@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # 🧑‍💻 Bobbis Systems — setup_user.sh
-# Creates a system user, optionally sets password, and writes to /etc/bobbis-user.conf
+# Creates a system user, optionally sets password, and appends to /etc/bobbis.conf
 
 UX=true
 USER="dockerdev"
@@ -42,8 +42,8 @@ set_password_prompt() {
 
 # === 📝 Write config ===
 write_config() {
-  echo "DEFAULT_USER="$USER"" > /etc/bobbis-user.conf
-  echo "ℹ️  Saved user to /etc/bobbis-user.conf"
+  echo "DEFAULT_USER="$USER"" >> /etc/bobbis.conf
+  echo "ℹ️  Appended user to /etc/bobbis.conf"
 }
 
 # === 🚀 Run Logic ===
